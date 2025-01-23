@@ -4,37 +4,32 @@ A school project designed to learn and apply fundamental and advanced Java conce
 
 ## 📚 Project Overview
 
-The **Eventmanager** is a console-based application for managing events and user registrations. Developed in an educational context, it demonstrates key Java concepts through practical implementation while meeting specific project requirements.
+The **Eventmanager** is a console-based application that facilitates event management and user registration. Developed in an educational setting, this project emphasizes the practical application of key Java concepts while meeting specific learning goals and requirements.
 
 ---
 
-## 🎯 Learning Objectives & Requirements
+## 🎯 Learning Goals & Requirements
 
-### **Learning Objectives**
-- Master **object-oriented programming (OOP)** principles:
-    - **Inheritance**: Sharing attributes and methods across event types (e.g., concerts, workshops).
-    - **Polymorphism**: Using abstract methods like `calculateCost()` to handle diverse event-specific logic.
-    - **Interfaces**: Implementing the `Notifiable` interface for notifications.
-    - **Encapsulation**: Managing data with private attributes and getters/setters.
-- Handle errors effectively with **custom exceptions**:
-    - `EventNotFoundException` for missing events.
-    - `UserAlreadyRegisteredException` for duplicate registrations.
-- Build proficiency in using **data structures** like lists for managing users and events.
+This project covers the following topics and objectives:
 
-### **Project Requirements**
-1. **Event Management**:
-    - Add new events (Concert, Workshop, Conference).
-    - List and search events.
-2. **User Management**:
-    - Register users to events.
-    - Display users for a specific event.
-3. **Error Handling**:
-    - Validate event existence and prevent duplicate registrations.
-4. **Modular Structure**:
-    - Use inheritance, interfaces, and custom exceptions for clean code organization.
-5. **Testing & Documentation**:
-    - Ensure functionality through JUnit tests.
-    - Use JavaDocs for detailed code documentation.
+1. **Core Java Topics**:
+    - **Inheritance**: Sharing common attributes and methods among event types.
+    - **Polymorphism**: Using method overriding and overloading, e.g., `calculateCost()` in event types.
+    - **Interfaces**: Implementing `Notifiable` to demonstrate interface usage.
+    - **Abstract Classes**: Leveraging the `Event` abstract class for extensibility.
+    - **Composition and Aggregation**: Structuring relationships between objects like events, users, and their dependencies.
+    - **Exception Handling**: Handling errors gracefully with custom exceptions (`EventNotFoundException`, `InvalidDateException`, etc.).
+
+2. **Documentation**:
+    - **JavaDoc**: Comprehensive documentation using annotations such as `@author`, `@version`, `@param`, `@return`, and `@throws`.
+    - **Class Diagrams**: Includes a UML diagram that accurately represents constructors, methods, and variables.
+
+3. **Testing**:
+    - **JUnit Tests**: Includes meaningful unit tests, targeting a test coverage of approximately 50-60%.
+
+4. **Demonstration & Presentation**:
+    - The project is presented to the teacher in a 5-minute session, explaining the purpose, structure, and implementation details.
+    - The theme is chosen by the student and preferably relates to their personal interests.
 
 ---
 ## 📈UML Diagram
@@ -45,12 +40,17 @@ The **Eventmanager** is a console-based application for managing events and user
 ## 🛠️ Features
 
 - **Event Management**:
-    - Add, list, and search events by name.
+    - Add, search, and list events (e.g., Concerts, Workshops, Conferences).
+    - Polymorphic behavior across event types for cost calculation and details display.
+
 - **User Management**:
     - Register users and assign them to events.
-    - View all users or users registered for specific events.
-- **Dynamic Cost Calculation**:
-    - Polymorphic handling of costs for different event types.
+    - List all users or those associated with a specific event.
+
+- **Core Concepts Demonstrations**:
+    - Object-oriented principles like inheritance, interfaces, and abstraction.
+    - Error handling with custom exceptions.
+    - Composition and aggregation for object relationships.
 
 ---
 
@@ -59,8 +59,8 @@ The **Eventmanager** is a console-based application for managing events and user
 ### Prerequisites
 
 - **Java 20** or higher
-- **Maven** (for dependency management)
-- An IDE like IntelliJ IDEA or Eclipse
+- **Maven** (for dependency management and builds)
+- An IDE like IntelliJ IDEA (recommended) or Eclipse
 
 ### Setting Up the Project
 
@@ -71,11 +71,13 @@ The **Eventmanager** is a console-based application for managing events and user
    ```
 
 2. **Install dependencies**:
+   Use Maven to download the required dependencies:
    ```bash
    mvn clean install
    ```
 
 3. **Run the application**:
+   Start the `EventManagerApp` class from your IDE or run it from the terminal:
    ```bash
    mvn exec:java -Dexec.mainClass="org.example.Main"
    ```
@@ -84,27 +86,61 @@ The **Eventmanager** is a console-based application for managing events and user
 
 ## 🧪 Running Tests
 
-- Run all tests with:
-  ```bash
-  mvn test
-  ```
-- Add new tests in the `src/test/java/org/example` directory.
+The project uses **JUnit 5** for unit testing to ensure core functionalities work as expected.
+
+1. **Run tests**:
+   ```bash
+   mvn test
+   ```
+
+2. **Add new tests**:
+   Create new test classes in the `src/test/java/org/example` directory.
 
 ---
 
 ## 🌟 How to Extend
 
-### Suggested Features
-1. **New Event Types**:
-    - Extend the abstract `Event` class with custom logic for cost calculation and details.
-2. **Graphical Interface**:
-    - Build a GUI using JavaFX or Swing for a user-friendly interface.
-3. **Persistence**:
-    - Store event and user data in a database (e.g., SQLite).
+### Adding New Features
+
+1. **Add a new event type**:
+    - Extend the abstract `Event` class.
+    - Implement the `calculateCost()` method and any unique functionality.
+
+2. **Improve User Interaction**:
+    - Add more user-friendly features, like searching users or events interactively.
+
+3. **Enhance with GUI**:
+    - Optionally add a graphical user interface (e.g., with JavaFX) for better usability.
+
+4. **Database Integration**:
+    - Add persistence with a database like SQLite for permanent storage of events and users.
 
 ---
 
-## 👨‍💻 Authors
+## 📝 Requirements Checklist
+
+### Project-Independent Topics
+- **JavaDoc**: Complete documentation with key annotations like `@author`, `@version`, `@param`.
+- **Unit Tests**: Includes meaningful tests covering at least 50-60% of the code.
+- **Class Diagram**: An up-to-date UML diagram generated from IntelliJ.
+
+### Project-Dependent Topics
+- **Inheritance**: Shared logic across multiple event types.
+- **Composition & Aggregation**: Logical relationships between objects.
+- **Polymorphism**: Overriding methods (e.g., `displayDetails`) for dynamic behavior.
+- **Interfaces**: Implementation of the `Schedulable` and `Notifiable` interfaces.
+- **Abstract Classes**: The `Event` class provides a base for specific event types.
+- **Overloading & Overriding**: Demonstrated across methods and constructors.
+- **Exception Handling**: Custom exceptions for robust error management.
+
+### Core Java Elements
+- **Constructors**: Used effectively across all classes.
+- **Variables & Methods**: Proper encapsulation and functionality across classes.
+- **Execution**: The code is designed to run and demonstrate all required features.
+
+---
+
+## 👨‍💻 Author
 
 - **Jannik Lüthi** - Student, Aspiring Java Developer
 
@@ -112,7 +148,6 @@ The **Eventmanager** is a console-based application for managing events and user
 
 ## 📜 License
 
-This project is developed as part of a school assignment and is intended for educational purposes only.
+This project was developed as part of a school assignment and is intended for educational purposes only.
 
---- 
-
+---
