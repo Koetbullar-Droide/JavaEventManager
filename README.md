@@ -4,39 +4,53 @@ A school project designed to learn and apply fundamental and advanced Java conce
 
 ## 📚 Project Overview
 
-The **Eventmanager** is a console-based application that enables event management and user registration. This project was developed in an educational context to learn and practice the following Java concepts:
-
-- **Inheritance**: Sharing common attributes and methods among different event types (e.g., concerts, workshops, conferences).
-- **Polymorphism**: Using the abstract method `calculateCost()` for diverse event types.
-- **Interfaces**: Implementing the `Notifiable` interface for notifications.
-- **Exceptions**: Handling custom exceptions like `EventNotFoundException` and `UserAlreadyRegisteredException`.
-- **Data Structures**: Using lists to store events and users.
+The **Eventmanager** is a console-based application for managing events and user registrations. Developed in an educational context, it demonstrates key Java concepts through practical implementation while meeting specific project requirements.
 
 ---
 
-## 🎯 Purpose of the Project
+## 🎯 Learning Objectives & Requirements
 
-The goal of this project is to build a functional Java program that implements the principles of object-oriented programming (OOP). Additionally, it provides a practical application for these concepts by managing events and users.
+### **Learning Objectives**
+- Master **object-oriented programming (OOP)** principles:
+    - **Inheritance**: Sharing attributes and methods across event types (e.g., concerts, workshops).
+    - **Polymorphism**: Using abstract methods like `calculateCost()` to handle diverse event-specific logic.
+    - **Interfaces**: Implementing the `Notifiable` interface for notifications.
+    - **Encapsulation**: Managing data with private attributes and getters/setters.
+- Handle errors effectively with **custom exceptions**:
+    - `EventNotFoundException` for missing events.
+    - `UserAlreadyRegisteredException` for duplicate registrations.
+- Build proficiency in using **data structures** like lists for managing users and events.
+
+### **Project Requirements**
+1. **Event Management**:
+    - Add new events (Concert, Workshop, Conference).
+    - List and search events.
+2. **User Management**:
+    - Register users to events.
+    - Display users for a specific event.
+3. **Error Handling**:
+    - Validate event existence and prevent duplicate registrations.
+4. **Modular Structure**:
+    - Use inheritance, interfaces, and custom exceptions for clean code organization.
+5. **Testing & Documentation**:
+    - Ensure functionality through JUnit tests.
+    - Use JavaDocs for detailed code documentation.
+
+---
+## 📈UML Diagram
+![uml.png](uml.png)
 
 ---
 
 ## 🛠️ Features
 
 - **Event Management**:
-  - Add new events.
-  - List all available events.
-  - Search for specific events.
-
+    - Add, list, and search events by name.
 - **User Management**:
-  - Register and manage users.
-  - Add users to events.
-  - View all registered users.
-  - Display users registered for a specific event.
-
-- **Java Concept Demonstrations**:
-  - Inheritance and polymorphism for event types.
-  - Custom exceptions for error handling.
-  - Interfaces for notification functionality.
+    - Register users and assign them to events.
+    - View all users or users registered for specific events.
+- **Dynamic Cost Calculation**:
+    - Polymorphic handling of costs for different event types.
 
 ---
 
@@ -45,64 +59,48 @@ The goal of this project is to build a functional Java program that implements t
 ### Prerequisites
 
 - **Java 20** or higher
-- **Maven** (for dependency management and builds)
-- An IDE like IntelliJ IDEA (recommended) or Eclipse
+- **Maven** (for dependency management)
+- An IDE like IntelliJ IDEA or Eclipse
 
 ### Setting Up the Project
 
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Koetbullar-Droide/JavaEventManager.git
    cd Eventmanager
    ```
 
 2. **Install dependencies**:
-   Use Maven to download the required dependencies:
    ```bash
    mvn clean install
    ```
 
 3. **Run the application**:
-   Start the `EventManagerApp` class from your IDE or run it from the terminal:
    ```bash
-   mvn exec:java -Dexec.mainClass="org.example.EventManagerApp"
+   mvn exec:java -Dexec.mainClass="org.example.Main"
    ```
 
 ---
 
 ## 🧪 Running Tests
 
-The project uses **JUnit 5** for unit testing to ensure the core functionalities work as expected.
-
-1. **Run tests**:
-   ```bash
-   mvn test
-   ```
-
-2. **Add new tests**:
-   Create new test classes in the `src/test/java/org/example` directory.
+- Run all tests with:
+  ```bash
+  mvn test
+  ```
+- Add new tests in the `src/test/java/org/example` directory.
 
 ---
 
 ## 🌟 How to Extend
 
-### Adding New Features
-
-1. **Add a new event type**:
-   - Create a new class that extends the abstract class `Event`.
-   - Implement the `calculateCost()` method for specific cost calculations for your new event type.
-
-2. **Create a graphical user interface (optional)**:
-   - Enhance the application with JavaFX or another GUI library to provide a user-friendly interface.
-
-3. **Add persistence**:
-   - Integrate a database like SQLite to store events and users permanently.
-
-### Coding Guidelines
-
-- Follow **Clean Code** principles.
-- Use **JavaDocs** to document your code.
-- Write unit tests for all new features.
+### Suggested Features
+1. **New Event Types**:
+    - Extend the abstract `Event` class with custom logic for cost calculation and details.
+2. **Graphical Interface**:
+    - Build a GUI using JavaFX or Swing for a user-friendly interface.
+3. **Persistence**:
+    - Store event and user data in a database (e.g., SQLite).
 
 ---
 
@@ -114,6 +112,7 @@ The project uses **JUnit 5** for unit testing to ensure the core functionalities
 
 ## 📜 License
 
-This project was developed as part of a school assignment and is intended for educational purposes only.
+This project is developed as part of a school assignment and is intended for educational purposes only.
 
----
+--- 
+
